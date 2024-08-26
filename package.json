@@ -14,5 +14,13 @@
   "type": "module",
   "workspaces": [
     "src/ECommerceAPI_frontend"
-  ]
+  ],
+  "dependencies": {
+    "@dfinity/auth-client": "^2.0.0",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^5.16.7",
+    "framer-motion": "^11.3.30",
+    "react-router-dom": "^6.26.1"
+  }
 }

@@ -448,48 +448,49 @@ function CategoryList() {
     </MotionBox>
   );
 }
+
 function AccountPage() {
-  const [userInfo, setUserInfo] = useState(null);
-
-  useEffect(() => {
-    fetchUserInfo();
-  }, []);
-
-  const fetchUserInfo = async () => {
-    try {
-      const apiKey = localStorage.getItem('apiKey');
-      const result = await ECommerceAPI_backend.getUserInfo(apiKey);
-      if ('ok' in result) {
-        setUserInfo(result.ok);
-      } else {
-        console.error(result.err);
+    const [userInfo, setUserInfo] = useState(null);
+  
+    useEffect(() => {
+      fetchUserInfo();
+    }, []);
+  
+    const fetchUserInfo = async () => {
+      try {
+        const apiKey = localStorage.getItem('apiKey');
+        const result = await ECommerceAPI_backend.getUserInfo(apiKey);
+        if ('ok' in result) {
+          setUserInfo(result.ok);
+        } else {
+          console.error(result.err);
+        }
+      } catch (error) {
+        console.error('Fetch user info error:', error);
       }
-    } catch (error) {
-      console.error('Fetch user info error:', error);
-    }
-  };
-
-  return (
-    <MotionBox
-      sx={{ mt: 4 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Typography variant="h4" gutterBottom>My Account</Typography>
-      {userInfo ? (
-        <Card>
-          <CardContent>
-            <Typography variant="body1">Principal ID: {userInfo.principal}</Typography>
-            <Typography variant="body1">Username: {userInfo.username}</Typography>
-            <Typography variant="body1">Account Created: {new Date(userInfo.created_at).toLocaleString()}</Typography>
-          </CardContent>
-        </Card>
-      ) : (
-        <Typography variant="body1">Loading user info...</Typography>
-      )}
-    </MotionBox>
-  );
-}
-
-export default App;
+    };
+  
+    return (
+      <MotionBox
+        sx={{ mt: 4 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Typography variant="h4" gutterBottom>My Account</Typography>
+        {userInfo ? (
+          <Card>
+            <CardContent>
+              <Typography variant="body1">Principal ID: {userInfo.principal}</Typography>
+              <Typography variant="body1">Username: {userInfo.username}</Typography>
+              <Typography variant="body1">Account Created: {new Date(userInfo.created_at).toLocaleString()}</Typography>
+            </CardContent>
+          </Card>
+        ) : (
+          <Typography variant="body1">Loading user info...</Typography>
+        )}
+      </MotionBox>
+    );
+  }
+  
+  export default App;

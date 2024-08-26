@@ -1,0 +1,171 @@
+/* App.css */
+
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul, li, button, input, select {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  nav {
+    background-color: #282c34;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #4da8d4;
+  }
+  
+  h1, h2, h3 {
+    color: #282c34;
+    margin-bottom: 20px;
+  }
+  
+  input, select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  ul li button {
+    background-color: #ff6347;
+  }
+  
+  ul li button:hover {
+    background-color: #e04e3c;
+  }
+  
+  /* Form Styles */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  form input, form select {
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Home Page */
+  .home-page {
+    text-align: center;
+  }
+  
+  .home-page p {
+    margin: 20px 0;
+  }
+  
+  /* Store List */
+  .store-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .store-list ul {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Store Page */
+  .store-page h3 {
+    margin-top: 20px;
+  }
+  
+  /* Category List */
+  .category-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Account Page */
+  .account-page h3 {
+    margin-top: 20px;
+  }
+  
+  .account-page ul {
+    margin-top: 10px;
+  }
+  
+  .account-page ul li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+  }
+  
